@@ -24,17 +24,16 @@ def mandelbrot_set(width, height, x_min, x_max, y_min, y_max, max_iter):
 
 def plot_mandelbrot(mandelbrot_image, x_min, x_max, y_min, y_max):
     plt.imshow(mandelbrot_image, cmap='viridis', extent=(x_min, x_max, y_min, y_max)) 
-    plt.xlim(-1.5, 1.5)  # Set x-axis limits
-    plt.ylim(-1, 2)  # Set y-axis limits
+    plt.xlim(-1.5, 1.5)  # Set x-axis limits for image display 
+    plt.ylim(-1, 2)  
     plt.axis('off')  # Turn off axis labels and ticks
-    #plt.show()
-    plt.savefig('mandelbrot_full.png', dpi = 1000)
+    plt.show()
+    #plt.savefig('mandelbrot_full.png', dpi = 1000)
 
 if __name__ == "__main__":
-    width, height = 4000, 4000
-    # 3000,3000
-    x_min, x_max = -2, 2  # Adjust the x-axis limits for zooming
-    y_min, y_max = -2, 2   # Adjust the y-axis limits for zooming
+    width, height = 500, 500
+    x_min, x_max = -2, 2  # Adjust the x-axis limits for zooming into the Mandelbrot set
+    y_min, y_max = -2, 2  
     max_iter = 100
 
     mandelbrot_image = mandelbrot_set(width, height, x_min, x_max, y_min, y_max, max_iter)
